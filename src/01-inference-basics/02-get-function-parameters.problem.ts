@@ -11,7 +11,10 @@ const makeQuery = (
   },
 ) => {};
 
-type MakeQueryParameters = unknown;
+type parameters =Parameters<typeof makeQuery>
+// here parameters returns the type of arguments as tuple. 
+
+type MakeQueryParameters = parameters;
 
 type tests = [
   Expect<
